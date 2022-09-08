@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+
+.informations {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    background-color: 
+    #00C8DC;
+    width: 100%;
+  }
+
+
+.p {
+      color: aliceblue;
+      padding: 200px;
+      margin-left: 120px;
+      font-size: 35px
+  }
+
+  .entregador 
+  {
+    padding: 100px;
+    margin-left: 120px;
+  }
+
+  .img {
+    width:  100%;
+  }

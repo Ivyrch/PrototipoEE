@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+<br />
+<p align="center">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <h1 align="center">Projeto CRIA</h1>
+ <br />
+  <p align="center">
+     Sumário
+      <p align="center">
+  <a href="#projeto"> Projeto</a> |
+  <a href="#arquitetura"> Arquitetura </a> |
+  <a href="#tecnologias-utilizadas"> Tecnologias utilizadas </a>     
+       <br />
+    <br />
+  </p>
+</p>
 
-## Available Scripts
+#Projeto
 
-In the project directory, you can run:
+O projeto CRIA foi idealizado afim de tornar a vida das pessoas que vivem em lugares de dificil acesso mais fácil, modificando os critérios de localização em lugares onde a densidade geografica impossiblita que pessoas comuns tenham um simples endereço. Para quem não conhece, esses lugares são chamados de favelas ou comunidades, e dentre muitos problemas existentes nesses lugares o que chamou nossa atenção e nos levou a pensar em uma solução tecnológica, foi o fato de que as pessoas não recebem suas encomendas em suas casas, seja por morarem em lugares de dificil acesso ou por não ter uma localização oficial como um endereço postal, etc.
 
-### `npm start`
+Pensando nisso, nosso projeto é dividido em duas partes. A primeira, é a parte logistica que é ter dentro das favelas lugares chamados de hubs logísticos que serão estabelecidos em locais sociais, como ongs e associações de moradores, e nesses hubs chegariam todos as remessas dos moradores da localidade. A segunda parte do projeto é nossa solução tecnologica, os moradores se inscreverão em nosso site CRIA, e entre os dados pessoais ele informará sua geolocalização utilizando um mapa em nosso formulário de cadastro, com esse dado, os entregadores locais conseguem realizar a entrega na porta do consumidor ou no hub mais proximo da localização informada, para a retirada opcional.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Futuramente, o projeto tem como objetivo tornar o caminho inverso possível, transformando esses hubs em locais de coleta para entregas. Para isso, existiria a possibilidade de que moradores dessas comunidades possam vender pela internet e utilizar esses hubs para enviar suas mercadorias.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+A ideia é extender o conceito de última milha ao maximo de pessoas, entregando suas mercadorias com dignidade, aumentando o publico dos clientes da "Eu entrego", sua pupularidade enquanto marca e gerando empregos para pessoas da localidade.
 
-### `npm test`
+#Arquitetura
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+A ideia é ter um projeto que possa utilizar as APIs que já existem, que interpretaria se a entrega é para uma dos hubs CRIA em umas dessas localidades, essa API também teria como responsabildade de receber e armazenar os dados dos moradores que se cadastrassem. No site utilizaremos a API de geolocalização do google maps e entregadores da região receberão prioridade para essas entregas. 
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Esses Hubs logisticos devem ter uma interatividade automatizada com as pessoas cadastradas no CRIA assim que a remessa chegar no hub proximo ao endereço de entrega, uma mensagem chegara para pessoa, para isso seria utilizado a API whatsapp de terceiros.
