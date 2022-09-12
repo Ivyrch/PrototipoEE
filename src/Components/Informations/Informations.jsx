@@ -8,17 +8,15 @@ import entregador from "../../assets/entregador.jpg";
         return (
       
           <header className={styles.informations}>
-            
+      
             <div className={styles.p}>
-             <p>Uma nova  forma de estar presente nas comunidades.  <p>
-              </p>Conectando você e a suas compras sem dor de cabeça.</p>
+              
+              <p> Por uma entrega que realmente chegue na sua porta. </p>
             </div>
-           
+            
       
             <div className={styles.entregador}>
             <img src={entregador} alt={entregador} className={styles.img}/>
-              
-            
             
             </div>
           </header>

@@ -1,10 +1,9 @@
 
 import React from 'react'
-import Forms from './Components/Forms/Forms'
-import Informations from './Components/Informations/Informations'
+import Home from './pages/Home'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import SendedForm from './pages/SendedForm';
 
-import Header from './Components/Header/Header'
-import Footer from './Components/Footer/Footer'
 
 
 function App() {
@@ -14,13 +13,13 @@ function App() {
     
 
      <div>
-   <Header />
-   <Informations />
-   <Forms/>
-   <Footer />
-
- 
-   
+      <Router>
+        <Routes>
+           <Route path="/" element={<Home />} />
+           <Route path="/envio" element={<SendedForm />} />
+           </Routes>
+        </Router>
+          
    </div> 
   )
 }

@@ -7,6 +7,10 @@ import Map from "../Map/Map";
 
 export default function Forms() {
 
+   
+
+ 
+
     const formik = useFormik({
         initialValues: {
             firstName: "",
@@ -16,18 +20,21 @@ export default function Forms() {
             phone: "",
         },
         onSubmit: values => {
+            
             alert(JSON.stringify(values, null, 2))
         },
     })
 
     return (
         <>
+
             <Flex align="center" justify="center">
                 <form onSubmit={formik.handleSubmit}>
                     <FormControl isRequired>
-                        <Text mt={10} ml={5} color= "#00C8DC" fontSize={30}>Preencha nosso formulário para se cadastrar:</Text>
-                    <Flex>
+
+                        <Text mt={10} ml={5} color="#00C8DC" fontSize={40}> Essas informações estão certas?</Text>
                         <Flex>
+                            <Flex>
                                 <Input
                                     variant='flushed'
                                     id="firstName"
@@ -36,8 +43,7 @@ export default function Forms() {
                                     placeholder='Nome'
                                     onChange={formik.handleChange}
                                     value={formik.values.firstName}
-                                    m={10}
-                                    />
+                                    m={10} />
                             </Flex>
                             <Flex>
                                 <Input
@@ -48,15 +54,14 @@ export default function Forms() {
                                     placeholder='E-mail'
                                     onChange={formik.handleChange}
                                     value={formik.values.email}
-                                    m={10}
-                                    />
-                         </Flex>
+                                    m={10} />
+                            </Flex>
 
-                         </Flex>
-                        
-                        
+                        </Flex>
+
+
                         <Flex>
-                        <Flex>
+                            <Flex>
                                 <Input
                                     type="text"
                                     id="cpf"
@@ -65,10 +70,9 @@ export default function Forms() {
                                     placeholder='CPF'
                                     onChange={formik.handleChange}
                                     value={formik.values.cpf}
-                                    m={10}
-                                    />
-                           </Flex>
-                           <Flex>
+                                    m={10} />
+                            </Flex>
+                            <Flex>
                                 <Input
                                     type="number"
                                     id="phone"
@@ -77,32 +81,32 @@ export default function Forms() {
                                     placeholder='Telefone de Contato'
                                     onChange={formik.handleChange}
                                     value={formik.values.phone}
-                                    m={10}
-                                    />
+                                    m={10} />
                             </Flex>
-                            </Flex>
-                            <Flex>
-                                <Input
-                                    type="text"
-                                    id="endereco"
-                                    name="endereco"
-                                    variant='flushed'
-                                    placeholder='Endereço na Comunidade'
-                                    onChange={formik.handleChange}
-                                    value={formik.values.endereco}
-                                    m={10}
-                                    />
-                            </Flex>
-                            
-                           
+                        </Flex>
+                        <Flex>
+                            <Input
+
+                                type="text"
+                                id="endereco"
+                                name="endereco"
+                                variant='flushed'
+                                placeholder='Endereço na Comunidade'
+                                onChange={formik.handleChange}
+                                value={formik.values.endereco}
+                                m={10} />
+                        </Flex>
+
+
                     </FormControl>
-                    <Text ml={20} mb={10} color="#726a70"> Agora marque onde você acredita ser a sua casa no mapa: </Text>
-                    <Map/>
-                    
-                <Button ml={80}  mb={100}  color="#00C8DC" type="submit">enviar</Button>
-                       
+                    <Text ml={10} mb={10} color="#00C8DC" fontSize={23}> Nos ajude marcando no mapa onde você acredita ser sua casa: </Text>
+                    <Map />
+
+                    <Button ml={80} mb={100} color="#00C8DC" type="submit" >enviar</Button>
+
                 </form>
             </Flex>
+        
         </>
     )
 }
