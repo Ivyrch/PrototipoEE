@@ -1,4 +1,4 @@
-import { Flex, Text, Image, Heading } from "@chakra-ui/react"
+import { Flex, Image, Heading } from "@chakra-ui/react"
 import logo from "../../assets/EE-branco.png";
 
 

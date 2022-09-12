@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, BrowserRouter, Switch } from "react-router-dom";
+import { Route} from "react-router-dom";
 import SendedForm from "../pages/SendedForm";
 import Home from "../pages/Home";
 

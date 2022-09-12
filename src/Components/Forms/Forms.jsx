@@ -1,6 +1,7 @@
 import { Button, Flex, FormControl, Input, Text } from "@chakra-ui/react";
 import { useFormik } from 'formik'
 import Map from "../Map/Map";
+import { Link, NavLink } from 'react-router-dom';
 
 
 
@@ -19,10 +20,10 @@ export default function Forms() {
             email: "",
             phone: "",
         },
-        onSubmit: values => {
+         onSubmit: values => {
             
-            alert(JSON.stringify(values, null, 2))
-        },
+            <Link  to= "/envio"></Link>
+        }, 
     })
 
     return (
@@ -102,7 +103,7 @@ export default function Forms() {
                     <Text ml={10} mb={10} color="#00C8DC" fontSize={23}> Nos ajude marcando no mapa onde você acredita ser sua casa: </Text>
                     <Map />
 
-                    <Button ml={80} mb={100} color="#00C8DC" type="submit" >enviar</Button>
+                   <NavLink to="/envio" > <Button ml={80} mb={100} color="#00C8DC" type="submit" >enviar</Button> </NavLink>
 
                 </form>
             </Flex>
