@@ -1,6 +1,6 @@
 import React from "react";
 import { Route} from "react-router-dom";
-import SendedForm from "../pages/SendedForm";
+import NewAdress from "../pages/NewAdress";
 import Home from "../pages/Home";
 
 
@@ -11,7 +11,7 @@ const Routes = () => {
            <Routes>
            <Route component = { <Home/> }  path="/home
            " />
-           <Route component = { <SendedForm/> }  path="/envio" />
+           <Route component = { <NewAdress/> }  path="/envio" />
            </Routes>
       
    )

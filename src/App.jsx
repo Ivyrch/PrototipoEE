@@ -2,7 +2,7 @@
 import React from 'react'
 import Home from './pages/Home'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import SendedForm from './pages/SendedForm';
+import NewAdress from './pages/NewAdress'
 
 
 
@@ -16,7 +16,7 @@ function App() {
       <Router>
         <Routes>
            <Route path="/" element={<Home />} />
-           <Route path="/envio" element={<SendedForm />} />
+           <Route path="/envio" element={<NewAdress />} />
            </Routes>
         </Router>
           

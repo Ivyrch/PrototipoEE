@@ -1,10 +1,11 @@
 import React from 'react';
 import Header from '../Components/Header/Header';
 import Footer from '../Components/Footer/Footer';
+import SucessInfo from '../Components/Forms/SuccesInfo';
 
 
 
-function SendedForm() {
+function NewAdress() {
 
 
   
@@ -12,8 +13,7 @@ function SendedForm() {
     return (
         <div>
         <Header />
-         <h1>Suas informações foram salvas no nosso sistema! </h1>
-         <p> Obrigado por nos ajudar a melhorar!</p>
+        <SucessInfo />
         <Footer />
      
       
@@ -23,4 +23,4 @@ function SendedForm() {
     )
 }
 
-export default SendedForm;
+export default NewAdress;
