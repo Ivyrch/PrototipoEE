@@ -1,39 +1,74 @@
 import React from "react";
-import { GoogleMap, useJsApiLoader, Marker } from "@react-google-maps/api";
+import {
+  GoogleMap,
+  useLoadScript,
+  Marker,
+} from "@react-google-maps/api";
 
 import "./Map.css";
 
+const libraries = ["places"];
+const mapContainerStyle = {
+  width: "60vw",
+  height: "20vw",
+};
+const center = {
+  lat: -22.986859,
+  lng: -43.25401,
+};
+const options = {
+  disableDefaultUI: true,
+  zoomControl: true,
+  mapTypeId: "satellite",
+};
 
 
 const Map = () => {
-  const { isLoaded } = useJsApiLoader({
-    id: "google-map-script",
+  const { isLoaded, loadError } = useLoadScript({
     googleMapsApiKey: "AIzaSyCeDHNi83xewrFrCx8lqWUqybrHPYwRQIM",
+    libraries,
   });
-  
-  const position = {
-    lat: -22.986676,
-    lng:  -43.253537
-  }
-  
 
+  const [markers, setMarkers] = React.useState([]);
+  const [markerSelect, setMarkerSelected] = React.useState(null);
+
+  if (loadError) return "Erro ao carregar o mapa";
+  if (!isLoaded) return "Carregando mapas";
 
   return (
     <div className="map">
-      {isLoaded ? (
-        <GoogleMap
-          mapContainerStyle={{width: '100%', height: '90%'}}
-          center={position}
-          zoom={15}
-        >
-          
-         
-             <Marker position={{lat: -22.98661571556714, lng: -43.25394252698286}} draggable={true}/>  
-          
-        </GoogleMap>
-      ) : (
-        <></>
-      )}
+      <GoogleMap
+        mapContainerStyle={mapContainerStyle}
+        zoom={19}
+        center={center}
+        options={options}
+        onClick={(e) => {
+          setMarkers((current) => [
+            ...current,
+            {
+              lat: e.latLng.lat(),
+              lng: e.latLng.lng(),
+              time: new Date(),
+            },
+          ]);
+        }}
+      >
+
+        {markers.map((marker) => (
+          <Marker
+            title={
+              "latitude: " +
+              marker.lat.toString() +
+              "\n" +
+              " longitude: " +
+              marker.lng.toString()
+            }
+            draggable={true}
+            key={marker.time.toISOString()}
+            position={{ lat: marker.lat, lng: marker.lng }}
+          />
+        ))}
+      </GoogleMap>
     </div>
   );
 };
