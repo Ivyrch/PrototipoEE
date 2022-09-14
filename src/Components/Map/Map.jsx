@@ -2,8 +2,6 @@ import React from "react";
 import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
 import "./Map.css";
 
-
-
 const libraries = ["places"];
 const mapContainerStyle = {
   width: "60vw",
@@ -52,10 +50,14 @@ const Map = () => {
         {markers.map((marker) => (
           <Marker
             title={
+              "Bairro: Rocinha " +
+              "\n" +
+              "Rio de Janeiro - RJ " +
+              "\n" +
               "latitude: " +
               marker.lat.toString() +
               "\n" +
-              " longitude: " +
+              "longitude: " +
               marker.lng.toString()
             }
             draggable={true}
