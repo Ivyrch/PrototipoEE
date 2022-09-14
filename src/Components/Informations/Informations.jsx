@@ -16,7 +16,7 @@ import entregador from "../../assets/entregador.jpg";
             
       
             <div className={styles.entregador}>
-            <img src={entregador} alt={entregador} className={styles.img}/>
+            <img src={entregador} alt={entregador} />
             
             </div>
           </header>

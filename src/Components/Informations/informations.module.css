@@ -29,6 +29,29 @@
     margin-left: 70px;
   }
 
-  .img {
-    width:  100%;
+
+
+  @media(max-width: 1000px){
+    .informations {
+      width: 100%;
+      
+     
+     
+  
+    }
+    .p {
+     
+      padding: 45px;
+      font-size: 25px;
+      margin-left: 5px;
+     
+    
+    }
+
+  .entregador 
+  {
+    display: none;
   }
+  }
+    
+  

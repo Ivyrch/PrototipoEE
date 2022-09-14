@@ -15,7 +15,7 @@ function SucessInfo() {
         <div className={styles.informations}>
             <img src={sucess} alt={sucess} className={styles.img} />
 
-            <h1 className={styles.title}>Suas informações foram salvas com sucesso no nosso sistema! </h1>
+            <h1 className={styles.title}>Agora nossos entregadores possuem mais informação para completar sua entrega. </h1>
             <p class={styles.p}> Obrigado por nos ajudar a melhorar!</p>
 
             <NavLink to="/"> <Button className={styles.button}>voltar</Button> </NavLink>

@@ -9,8 +9,10 @@ import "./Map.css";
 
 const libraries = ["places"];
 const mapContainerStyle = {
-  width: "60vw",
+  width: "70vw",
   height: "20vw",
+  marginLeft: "80px",
+  
 };
 const center = {
   lat: -22.986859,
@@ -21,6 +23,7 @@ const options = {
   zoomControl: true,
   mapTypeId: "satellite",
 };
+
 
 
 const Map = () => {

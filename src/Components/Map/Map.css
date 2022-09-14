@@ -1,5 +1,14 @@
 .map {
-  height: 50vh;
+  width: 90vw;
+  height: 20vw;
+  margin-left: 150px;
+}
+
+@media(max-width: 1000px){
+  .map {
+  height: 10vw;
+  width: 40vw;
   margin-left: 30px;
   margin-bottom: 0px;
+  }
 }

@@ -2,6 +2,7 @@ import { Button, Flex, FormControl, Input, Text } from "@chakra-ui/react";
 import { useFormik } from 'formik'
 import Map from "../Map/Map";
 import { Link, NavLink } from 'react-router-dom';
+import styles from "./Forms.module.css";
 
 
 
@@ -33,77 +34,15 @@ export default function Forms() {
                 <form onSubmit={formik.handleSubmit}>
                     <FormControl isRequired>
 
-                        <Text mt={10} ml={5} color="#00C8DC" fontSize={40}> Essas informações estão certas?</Text>
-                        <Flex>
-                            <Flex>
-                                <Input
-                                    variant='flushed'
-                                    id="firstName"
-                                    name="firstName"
-                                    type="text"
-                                    placeholder='Nome'
-                                    onChange={formik.handleChange}
-                                    value={formik.values.firstName}
-                                    m={10} />
-                            </Flex>
-                            <Flex>
-                                <Input
-                                    type="email"
-                                    id="email"
-                                    name="email"
-                                    variant='flushed'
-                                    placeholder='E-mail'
-                                    onChange={formik.handleChange}
-                                    value={formik.values.email}
-                                    m={10} />
-                            </Flex>
-
-                        </Flex>
-
-
-                        <Flex>
-                            <Flex>
-                                <Input
-                                    type="text"
-                                    id="cpf"
-                                    name="cpf"
-                                    variant='flushed'
-                                    placeholder='CPF'
-                                    onChange={formik.handleChange}
-                                    value={formik.values.cpf}
-                                    m={10} />
-                            </Flex>
-                            <Flex>
-                                <Input
-                                    type="number"
-                                    id="phone"
-                                    name="phone"
-                                    variant='flushed'
-                                    placeholder='Telefone de Contato'
-                                    onChange={formik.handleChange}
-                                    value={formik.values.phone}
-                                    m={10} />
-                            </Flex>
-                        </Flex>
-                        <Flex>
-                            <Input
-
-                                type="text"
-                                id="endereco"
-                                name="endereco"
-                                variant='flushed'
-                                placeholder='Endereço na Comunidade'
-                                onChange={formik.handleChange}
-                                value={formik.values.endereco}
-                                m={10} />
-                        </Flex>
+                        <Text className={styles.p}> Olá Paulo, seja bem vindo(a)! <br></br> Já temos o seu endereço e até aqui está tudo certo para sua entrega. <br></br> O endereço fornecido é: <br></br> Rua Dionéia 741 casa 4q </Text>
+                        
 
 
                     </FormControl>
-                    <Text ml={10} mb={10} color="#00C8DC" fontSize={23}> Nos ajude marcando no mapa onde você acredita ser sua casa: </Text>
+                    <Text className={styles.p2}> agora, o próximo passo é marcar no mapa o local mais próximo da sua casa: </Text>
                     <Map />
 
-                   <NavLink to="/envio" > <Button ml={80} mb={100} color="#00C8DC" type="submit" >enviar</Button> </NavLink>
+                   <NavLink to="/envio" > <Button className={styles.btn} type="submit" >enviar</Button> </NavLink>
 
                 </form>
             </Flex>
