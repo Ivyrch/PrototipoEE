@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  GoogleMap,
-  useLoadScript,
-  Marker,
-} from "@react-google-maps/api";
-
+import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
 import "./Map.css";
 
 const libraries = ["places"];
@@ -17,16 +12,14 @@ const mapContainerStyle = {
   
 };
 const center = {
-  lat: -22.986859,
-  lng: -43.25401,
+  lat: -22.9865007,
+  lng: -43.2522318,
 };
 const options = {
   disableDefaultUI: true,
   zoomControl: true,
   mapTypeId: "satellite",
 };
-
-
 
 const Map = () => {
   const { isLoaded, loadError } = useLoadScript({
@@ -58,14 +51,17 @@ const Map = () => {
           ]);
         }}
       >
-
         {markers.map((marker) => (
           <Marker
             title={
+              "Bairro: Rocinha " +
+              "\n" +
+              "Rio de Janeiro - RJ " +
+              "\n" +
               "latitude: " +
               marker.lat.toString() +
               "\n" +
-              " longitude: " +
+              "longitude: " +
               marker.lng.toString()
             }
             draggable={true}
