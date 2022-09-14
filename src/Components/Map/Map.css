@@ -2,13 +2,14 @@
   width: 90vw;
   height: 20vw;
   margin-left: 150px;
+  margin-right: 0px;
 }
 
 @media(max-width: 1000px){
   .map {
   height: 10vw;
   width: 40vw;
-  margin-left: 30px;
-  margin-bottom: 0px;
+  margin-right: 40px;
+  margin-left: 0px;
   }
 }

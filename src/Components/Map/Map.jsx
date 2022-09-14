@@ -11,7 +11,9 @@ const libraries = ["places"];
 const mapContainerStyle = {
   width: "70vw",
   height: "20vw",
-  marginLeft: "80px",
+  marginRight: "14px",
+  marginLeft: "120px",
+
   
 };
 const center = {
