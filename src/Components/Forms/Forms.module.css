@@ -80,5 +80,16 @@
     margin-bottom: 100px;
   }
   }
+
+  @media(max-width: 600px)
+  {
+  .btn
+  {
+    
+   
+    margin-left: 270px;
+    margin-bottom: 100px;
+  }
+  }
     
   
